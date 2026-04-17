@@ -1,0 +1,46 @@
+{
+  "name": "agentrealm",
+  "version": "0.1.0",
+  "description": "Agentless sandbox workspaces for AI agents",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "realm": "bin/agentrealm.js",
+    "agentrealm": "bin/agentrealm.js",
+    "agent-realm": "bin/agentrealm.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/",
+    "skill/"
+  ],
+  "scripts": {
+    "test": "node --test test/basic.test.js"
+  },
+  "keywords": [
+    "agent",
+    "workspace",
+    "realm",
+    "ai",
+    "sandbox",
+    "agentless"
+  ],
+  "author": "Exis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exisz/agentrealm.git"
+  },
+  "homepage": "https://github.com/exisz/agentrealm#readme",
+  "bugs": {
+    "url": "https://github.com/exisz/agentrealm/issues"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "js-yaml": "^4.1.0"
+  }
+}
