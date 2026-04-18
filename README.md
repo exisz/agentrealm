@@ -5,6 +5,7 @@
 [![npm](https://img.shields.io/npm/v/agentrealm.svg)](https://www.npmjs.com/package/agentrealm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node.js](https://img.shields.io/node/v/agentrealm)](package.json)
+[![Release](https://github.com/exisz/agentrealm/actions/workflows/release.yml/badge.svg)](https://github.com/exisz/agentrealm/actions/workflows/release.yml)
 
 ---
 
