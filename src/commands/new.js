@@ -22,9 +22,7 @@ export function newCommand(program) {
 
       addRealm(registry, name, {
         dir,
-        status: 'active',
         created: new Date().toISOString(),
-        sealed_at: null,
         description: '',
       });
 

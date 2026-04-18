@@ -16,7 +16,7 @@ install: npm i -g agentrealm
 
 A **realm** is an agentless sandbox workspace. Unlike an agent workspace where a dedicated agent
 permanently guards the space, realms are ephemeral collaboration zones. Any agent can enter,
-work, and leave. Realms are sealed when the work is done.
+work, and leave.
 
 ## When This Skill Applies
 
@@ -47,10 +47,9 @@ context block. Paste it into your session or use `--copy` to get it on the clipb
    realm diary <name> "Brief note: what you did, what's next"
    ```
 
-## Leaving / Sealing
+## Leaving
 
 - Leave freely — no cleanup required beyond a diary note
-- Seal when the work is fully done: `realm seal <name>`
 
 ## Common Commands
 
@@ -58,9 +57,8 @@ context block. Paste it into your session or use `--copy` to get it on the clipb
 |---------|-------------|
 | `realm new <name>` | Create a new realm |
 | `realm prompt <name>` | Load realm context |
-| `realm ls` | List active realms |
+| `realm ls` | List realms |
 | `realm diary <name> "msg"` | Log a diary entry |
-| `realm seal <name>` | Seal a completed realm |
 | `realm cd <name>` | Get realm directory path |
 
 ## Finding This Skill

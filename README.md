@@ -12,7 +12,7 @@
 
 A **realm** is a lightweight, agentless sandbox workspace for AI agents.
 
-In a traditional agent workspace, one agent permanently guards the space — it's always watching, always running. A realm is different: **no agent lives there**. Any AI agent (or human) can enter when needed, do focused work, and leave. When the objective is complete, the realm is sealed.
+In a traditional agent workspace, one agent permanently guards the space — it's always watching, always running. A realm is different: **no agent lives there**. Any AI agent (or human) can enter when needed, do focused work, and leave. When the work is complete, simply delete the realm or keep it archived.
 
 Think of it as a shared project folder with built-in structure, a context loader, and a work diary — designed to be understood and entered by any agent without prior knowledge of the project.
 
@@ -23,7 +23,7 @@ Think of it as a shared project folder with built-in structure, a context loader
 | Persistent agent | ✅ Always watching | ❌ Agentless |
 | Entry model | One dedicated agent | Any agent |
 | Context loading | Agent-managed | `realm prompt <name>` |
-| Lifecycle | Ongoing | Scoped → seal when done |
+| Lifecycle | Ongoing | Scoped → delete when done |
 | Use case | Long-lived assistant | Focused task or project |
 | Overhead | High | Low |
 
@@ -51,14 +51,14 @@ realm prompt my-project
 # Copy context to clipboard (then paste into your agent)
 realm prompt my-project --copy
 
-# List all active realms
+# List all realms
 realm ls
 
 # Add a diary entry
 realm diary my-project "Finished the API integration, tests passing"
 
-# Seal when done
-realm seal my-project
+# When you're done, you can delete the realm or leave it archived
+# realm rm my-project --purge
 ```
 
 ---
@@ -68,11 +68,9 @@ realm seal my-project
 | Command | Description |
 |---------|-------------|
 | `realm new <name> [--dir <path>] [--with-diary]` | Create a new realm |
-| `realm ls [--all]` | List realms (active by default; `--all` includes sealed) |
+| `realm ls` | List realms |
 | `realm cd <name>` | Print realm directory (`cd $(realm cd foo)`) |
 | `realm prompt <name>` | Build context bundle — stdout, clipboard, or file |
-| `realm seal <name>` | Seal a realm (mark complete) |
-| `realm unseal <name>` | Unseal a realm (reactivate) |
 | `realm rm <name> [--purge] [--yes]` | Remove from registry; `--purge` deletes directory |
 | `realm diary <name> [message]` | Append diary entry or open in `$EDITOR` |
 | `realm skill` | Print path to bundled SKILL.md |
@@ -109,9 +107,7 @@ version: 1
 realms:
   my-project:
     dir: /Users/you/realms/my-project
-    status: active
     created: 2026-04-18T08:55:00.000Z
-    sealed_at: null
     description: ""
 ```
 

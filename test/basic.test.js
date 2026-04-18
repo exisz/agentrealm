@@ -29,23 +29,13 @@ describe('registry', () => {
     const reg = readRegistry();
     addRealm(reg, 'test-realm', {
       dir: REALM_DIR,
-      status: 'active',
       created: new Date().toISOString(),
-      sealed_at: null,
       description: '',
     });
 
     const reg2 = readRegistry();
     assert.ok(reg2.realms['test-realm']);
-    assert.equal(reg2.realms['test-realm'].status, 'active');
-  });
-
-  test('update realm', () => {
-    const reg = readRegistry();
-    updateRealm(reg, 'test-realm', { status: 'sealed', sealed_at: new Date().toISOString() });
-    const reg2 = readRegistry();
-    assert.equal(reg2.realms['test-realm'].status, 'sealed');
-    assert.ok(reg2.realms['test-realm'].sealed_at);
+    assert.ok(reg2.realms['test-realm'].created);
   });
 
   test('remove realm', () => {
