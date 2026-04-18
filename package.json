@@ -1,6 +1,6 @@
 {
   "name": "agentrealm",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Agentless sandbox workspaces for AI agents",
   "type": "module",
   "engines": {
