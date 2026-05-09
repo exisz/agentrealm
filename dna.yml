@@ -1,0 +1,9 @@
+id: dna://project/agentrealm
+type: project
+managed_by: dna://agent/nebula
+goal: TODO — fill in project goal
+boundary:
+  - TODO — fill in boundary
+status: stub
+repo: exisz/agentrealm
+built_from: dna://maintained-oss/exisz-agentrealm
